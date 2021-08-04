@@ -65,7 +65,7 @@ namespace GeradorDeCurriculo
         private void EntrarLoginbutton_Click(object sender, EventArgs e)
         {
             
-            var usuario = new UsuariosDAO().EntrarLogin(LogintextBox.Text.Trim(), SenhaloginetextBox.Text.Trim());
+            var usuario = new UsuarioDAO().EntrarLogin(LogintextBox.Text.Trim(), SenhaloginetextBox.Text.Trim());
 
 
             if (usuario == null)
@@ -90,7 +90,7 @@ namespace GeradorDeCurriculo
 
         private void Cadastrarloginbutton_Click(object sender, EventArgs e)
         {
-            new UsuariosEditarForm().ShowDialog();
+            new UsuarioForm().ShowDialog();
         }
     }
 }

@@ -20,11 +20,13 @@ namespace GeradorDeCurriculo.Dados.DAL
             return acessoDB.Query<ExperienciaProfissional>(@"select *from ExperienciaProfissional WHERE IDDadosPessoais =" + id + " Order By Empresa").ToList();
         }
 
+
         public ExperienciaProfissional Buscar (int id)
         {
             return acessoDB.Query<ExperienciaProfissional>(@"select *from ExperienciaProfissional WHERE ID=@id ", new { id }).FirstOrDefault();
         }
 
+       
         public bool Excluir(int id)
         {
             return acessoDB.Execute(@"DELETE from ExperienciaProfissional where ID=@pID",

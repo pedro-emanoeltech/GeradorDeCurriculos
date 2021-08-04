@@ -1,7 +1,7 @@
 ﻿
 namespace GeradorDeCurriculo
 {
-    partial class TelaEmpresaForm
+    partial class EmpresaForm
     {
         /// <summary>
         /// Required designer variable.

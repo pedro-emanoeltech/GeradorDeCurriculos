@@ -1,5 +1,4 @@
-﻿using GeradorDeCurriculo.Dados.DAL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//Referencia 
+using GeradorDeCurriculo.Dados.DAL;
 
 namespace GeradorDeCurriculo
 {
-    public partial class TelacurriculoForm : Form
+    public partial class ConsultaCurriculoForm : Form
     {
-        public TelacurriculoForm()
+        public ConsultaCurriculoForm()
         {
             InitializeComponent();
             Application.DoEvents();
@@ -109,7 +110,7 @@ namespace GeradorDeCurriculo
             if (id > 0)
             {
 
-                new CurriculoEditarForm(id).ShowDialog();
+                new CurriculoForm(id).ShowDialog();
                 Listar();
             }
             
@@ -118,7 +119,7 @@ namespace GeradorDeCurriculo
         private void Incluirbutton_Click(object sender, EventArgs e)
         {
             
-            new CurriculoEditarForm().ShowDialog();
+            new CurriculoForm().ShowDialog();
             Listar();
         }
 

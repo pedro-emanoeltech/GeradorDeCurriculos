@@ -16,7 +16,7 @@ namespace GeradorDeCurriculo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaInicalForm());
+            Application.Run(new IncialForm());
         }
     }
 }

@@ -61,10 +61,7 @@ namespace GeradorDeCurriculo.Dados.DAL
                     return 0;
             }
 
-
-
         }
-
 
     }
 }

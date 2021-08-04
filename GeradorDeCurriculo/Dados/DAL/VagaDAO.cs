@@ -15,64 +15,56 @@ namespace GeradorDeCurriculo.Dados.DAL
     public class VagasDAO : Conexao
     {
 
-
-
-      
-
-        public List<Vagas> Listar(string TituloVaga)
+        public List<Vaga> Listar(string TituloVaga)
         {
 
-            return acessoDB.Query<Vagas>(@"select *from Vagas WHERE TituloVaga LIKE '%" + TituloVaga + "%' Order By TituloVaga ").ToList();
+            return acessoDB.Query<Vaga>(@"select *from Vaga WHERE TituloVaga LIKE '%" + TituloVaga + "%' Order By TituloVaga ").ToList();
         }
 
-        public List<Vagas> ListarEmpresa(int id)
+        public List<Vaga> ListarEmpresa(int id)
         {
 
-            return acessoDB.Query<Vagas>(@"select *from Vagas WHERE IDEmpresa =" + id + " Order By TituloVaga").ToList();
+            return acessoDB.Query<Vaga>(@"select *from Vaga WHERE IDEmpresa =" + id + " Order By TituloVaga").ToList();
         }
 
-        public Vagas Buscar(int id)
+        public Vaga Buscar(int id)
         {
-            return acessoDB.Query<Vagas>(@"select *from  Vagas where ID=@id", new { id }).SingleOrDefault();
+            return acessoDB.Query<Vaga>(@"select *from  Vaga where ID=@id", new { id }).SingleOrDefault();
 
         }
 
-        public Vagas Rastreio(int id)
+        public Vaga Rastreio(int id)
         {
-            return acessoDB.Query<Vagas>(@"select *from  Vagas where IDUsuario=@id", new { id }).SingleOrDefault();
+            return acessoDB.Query<Vaga>(@"select *from  Vaga where IDUsuario=@id", new { id }).SingleOrDefault();
 
         }
 
         public bool Excluir(int id)
         {
-            return acessoDB.Execute(@"DELETE from Vagas where ID=@pID",
+            return acessoDB.Execute(@"DELETE from Vaga where ID=@pID",
                 new { pID = id }) == 1;
         }
 
-        public int Salvar(Vagas vagas)
+        public int Salvar(Vaga vagas)
         {
-
 
             if (vagas.ID == 0)
             {
 
-                return acessoDB.Execute("INSERT INTO  Vagas (TituloVaga,Descricao,Atividade,Requisitos,Salario,Cidade,TipoVaga,IDEmpresa) VALUES (@TituloVaga,@Descricao,@Atividade,@Requisitos,@Salario,@Cidade,@TipoVaga,@IDEmpresa) SELECT @@Identity", vagas);
+                return acessoDB.Execute("INSERT INTO  Vaga (TituloVaga,Descricao,Atividade,Requisitos,Salario,Cidade,TipoVaga,IDEmpresa) VALUES (@TituloVaga,@Descricao,@Atividade,@Requisitos,@Salario,@Cidade,@TipoVaga,@IDEmpresa) SELECT @@Identity", vagas);
 
             }
             else
             {
                 //UPDATE
-                if (acessoDB.Execute("UPDATE Vagas SET TituloVaga=@TituloVaga, Descricao=@Descricao, Atividade=@Atividade, Requisitos=@Requisitos, Salario=@Salario, Cidade=@Cidade, TipoVaga=@TipoVaga, IDEmpresa=@IDEmpresa WHERE Vagas.ID = @ID", vagas ) == 1)
+                if (acessoDB.Execute("UPDATE Vaga SET TituloVaga=@TituloVaga, Descricao=@Descricao, Atividade=@Atividade, Requisitos=@Requisitos, Salario=@Salario, Cidade=@Cidade, TipoVaga=@TipoVaga, IDEmpresa=@IDEmpresa WHERE Vaga.ID = @ID", vagas ) == 1)
                     return vagas.ID;
 
                 else
                     return 0;
             }
             
-
-
         }
-
 
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace GeradorDeCurriculo
 {
-    partial class TelacurriculoForm
+    partial class ConsultaVagaForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace GeradorDeCurriculo
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.ListarCurriculodataGridView = new System.Windows.Forms.DataGridView();
+            this.ListarVagasGridView = new System.Windows.Forms.DataGridView();
             this.radapepanel = new System.Windows.Forms.Panel();
             this.StatusBuscalabel = new System.Windows.Forms.Label();
             this.Incluirbutton = new System.Windows.Forms.Button();
@@ -40,47 +40,55 @@ namespace GeradorDeCurriculo
             this.PesquisatextBox = new System.Windows.Forms.TextBox();
             this.botoesPanel = new System.Windows.Forms.Panel();
             this.Fecharbutton = new System.Windows.Forms.Button();
-            this.DataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bairroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tituloVagaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.atividadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requisitosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nacionalidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoVagaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDEmpresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vagasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dadosPessoaisBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dadosPessoaisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.ListarCurriculodataGridView)).BeginInit();
+            this.vagasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vagasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ListarVagasGridView)).BeginInit();
             this.radapepanel.SuspendLayout();
             this.botoesPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vagasBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dadosPessoaisBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dadosPessoaisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vagasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vagasBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // ListarCurriculodataGridView
+            // ListarVagasGridView
             // 
-            this.ListarCurriculodataGridView.AllowUserToAddRows = false;
-            this.ListarCurriculodataGridView.AllowUserToDeleteRows = false;
-            this.ListarCurriculodataGridView.AutoGenerateColumns = false;
-            this.ListarCurriculodataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListarCurriculodataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ListarVagasGridView.AllowUserToAddRows = false;
+            this.ListarVagasGridView.AllowUserToDeleteRows = false;
+            this.ListarVagasGridView.AutoGenerateColumns = false;
+            this.ListarVagasGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ListarVagasGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
-            this.DataNascimento,
-            this.nomeDataGridViewTextBoxColumn,
-            this.enderecoDataGridViewTextBoxColumn,
-            this.bairroDataGridViewTextBoxColumn,
+            this.tituloVagaDataGridViewTextBoxColumn,
+            this.descricaoDataGridViewTextBoxColumn,
+            this.atividadeDataGridViewTextBoxColumn,
+            this.requisitosDataGridViewTextBoxColumn,
+            this.salarioDataGridViewTextBoxColumn,
             this.cidadeDataGridViewTextBoxColumn,
-            this.nacionalidadeDataGridViewTextBoxColumn,
-            this.telefoneDataGridViewTextBoxColumn});
-            this.ListarCurriculodataGridView.DataSource = this.dadosPessoaisBindingSource1;
-            this.ListarCurriculodataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListarCurriculodataGridView.Location = new System.Drawing.Point(0, 0);
-            this.ListarCurriculodataGridView.Name = "ListarCurriculodataGridView";
-            this.ListarCurriculodataGridView.ReadOnly = true;
-            this.ListarCurriculodataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListarCurriculodataGridView.Size = new System.Drawing.Size(905, 431);
-            this.ListarCurriculodataGridView.TabIndex = 0;
-            this.ListarCurriculodataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListarCurriculodataGridView_CellContentClick);
+            this.tipoVagaDataGridViewTextBoxColumn,
+            this.iDEmpresaDataGridViewTextBoxColumn});
+            this.ListarVagasGridView.DataSource = this.vagasBindingSource2;
+            this.ListarVagasGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListarVagasGridView.Location = new System.Drawing.Point(0, 0);
+            this.ListarVagasGridView.Name = "ListarVagasGridView";
+            this.ListarVagasGridView.ReadOnly = true;
+            this.ListarVagasGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ListarVagasGridView.Size = new System.Drawing.Size(905, 431);
+            this.ListarVagasGridView.TabIndex = 0;
+            this.ListarVagasGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListarCurriculodataGridView_CellContentClick);
             // 
             // radapepanel
             // 
@@ -123,7 +131,7 @@ namespace GeradorDeCurriculo
             this.Alterarbutton.Name = "Alterarbutton";
             this.Alterarbutton.Size = new System.Drawing.Size(66, 25);
             this.Alterarbutton.TabIndex = 4;
-            this.Alterarbutton.Text = "Alterar";
+            this.Alterarbutton.Text = "Visualisar";
             this.Alterarbutton.UseVisualStyleBackColor = true;
             this.Alterarbutton.Click += new System.EventHandler(this.Alterarbutton_Click);
             // 
@@ -174,42 +182,47 @@ namespace GeradorDeCurriculo
             this.Fecharbutton.UseVisualStyleBackColor = true;
             this.Fecharbutton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // DataNascimento
-            // 
-            this.DataNascimento.DataPropertyName = "DataNascimento";
-            this.DataNascimento.HeaderText = "DataNascimento";
-            this.DataNascimento.Name = "DataNascimento";
-            this.DataNascimento.ReadOnly = true;
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID Vaga";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // nomeDataGridViewTextBoxColumn
+            // tituloVagaDataGridViewTextBoxColumn
             // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeDataGridViewTextBoxColumn.Width = 250;
+            this.tituloVagaDataGridViewTextBoxColumn.DataPropertyName = "TituloVaga";
+            this.tituloVagaDataGridViewTextBoxColumn.HeaderText = "Vaga";
+            this.tituloVagaDataGridViewTextBoxColumn.Name = "tituloVagaDataGridViewTextBoxColumn";
+            this.tituloVagaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // enderecoDataGridViewTextBoxColumn
+            // descricaoDataGridViewTextBoxColumn
             // 
-            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
-            this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.enderecoDataGridViewTextBoxColumn.Width = 150;
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // bairroDataGridViewTextBoxColumn
+            // atividadeDataGridViewTextBoxColumn
             // 
-            this.bairroDataGridViewTextBoxColumn.DataPropertyName = "Bairro";
-            this.bairroDataGridViewTextBoxColumn.HeaderText = "Bairro";
-            this.bairroDataGridViewTextBoxColumn.Name = "bairroDataGridViewTextBoxColumn";
-            this.bairroDataGridViewTextBoxColumn.ReadOnly = true;
+            this.atividadeDataGridViewTextBoxColumn.DataPropertyName = "Atividade";
+            this.atividadeDataGridViewTextBoxColumn.HeaderText = "Atividade";
+            this.atividadeDataGridViewTextBoxColumn.Name = "atividadeDataGridViewTextBoxColumn";
+            this.atividadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // requisitosDataGridViewTextBoxColumn
+            // 
+            this.requisitosDataGridViewTextBoxColumn.DataPropertyName = "Requisitos";
+            this.requisitosDataGridViewTextBoxColumn.HeaderText = "Requisitos";
+            this.requisitosDataGridViewTextBoxColumn.Name = "requisitosDataGridViewTextBoxColumn";
+            this.requisitosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // salarioDataGridViewTextBoxColumn
+            // 
+            this.salarioDataGridViewTextBoxColumn.DataPropertyName = "Salario";
+            this.salarioDataGridViewTextBoxColumn.HeaderText = "Salario";
+            this.salarioDataGridViewTextBoxColumn.Name = "salarioDataGridViewTextBoxColumn";
+            this.salarioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cidadeDataGridViewTextBoxColumn
             // 
@@ -218,19 +231,23 @@ namespace GeradorDeCurriculo
             this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
             this.cidadeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // nacionalidadeDataGridViewTextBoxColumn
+            // tipoVagaDataGridViewTextBoxColumn
             // 
-            this.nacionalidadeDataGridViewTextBoxColumn.DataPropertyName = "Nacionalidade";
-            this.nacionalidadeDataGridViewTextBoxColumn.HeaderText = "Nacionalidade";
-            this.nacionalidadeDataGridViewTextBoxColumn.Name = "nacionalidadeDataGridViewTextBoxColumn";
-            this.nacionalidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipoVagaDataGridViewTextBoxColumn.DataPropertyName = "TipoVaga";
+            this.tipoVagaDataGridViewTextBoxColumn.HeaderText = "Tipo de Vaga";
+            this.tipoVagaDataGridViewTextBoxColumn.Name = "tipoVagaDataGridViewTextBoxColumn";
+            this.tipoVagaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // telefoneDataGridViewTextBoxColumn
+            // iDEmpresaDataGridViewTextBoxColumn
             // 
-            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "Telefone";
-            this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
-            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
-            this.telefoneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDEmpresaDataGridViewTextBoxColumn.DataPropertyName = "IDEmpresa";
+            this.iDEmpresaDataGridViewTextBoxColumn.HeaderText = "Cod Empresa";
+            this.iDEmpresaDataGridViewTextBoxColumn.Name = "iDEmpresaDataGridViewTextBoxColumn";
+            this.iDEmpresaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vagasBindingSource2
+            // 
+            this.vagasBindingSource2.DataSource = typeof(GeradorDeCurriculo.Dados.Mapeamento.Vaga);
             // 
             // dadosPessoaisBindingSource1
             // 
@@ -240,29 +257,40 @@ namespace GeradorDeCurriculo
             // 
             this.dadosPessoaisBindingSource.DataSource = typeof(GeradorDeCurriculo.Dados.Mapeamento.DadosPessoais);
             // 
-            // TelacurriculoForm
+            // vagasBindingSource
+            // 
+            this.vagasBindingSource.DataSource = typeof(GeradorDeCurriculo.Dados.Mapeamento.Vaga);
+            // 
+            // vagasBindingSource1
+            // 
+            this.vagasBindingSource1.DataSource = typeof(GeradorDeCurriculo.Dados.Mapeamento.Vaga);
+            // 
+            // TelaConsultaVagas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 431);
             this.Controls.Add(this.radapepanel);
-            this.Controls.Add(this.ListarCurriculodataGridView);
-            this.Name = "TelacurriculoForm";
-            this.Text = "Consulta Curriculo";
+            this.Controls.Add(this.ListarVagasGridView);
+            this.Name = "TelaConsultaVagas";
+            this.Text = "Consulta Vagas";
             this.Load += new System.EventHandler(this.TelacurriculoForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ListarCurriculodataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListarVagasGridView)).EndInit();
             this.radapepanel.ResumeLayout(false);
             this.radapepanel.PerformLayout();
             this.botoesPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.vagasBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dadosPessoaisBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dadosPessoaisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vagasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vagasBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView ListarCurriculodataGridView;
+        private System.Windows.Forms.DataGridView ListarVagasGridView;
         private System.Windows.Forms.Panel radapepanel;
         private System.Windows.Forms.Label listarcurriculoslabel;
         private System.Windows.Forms.TextBox PesquisatextBox;
@@ -274,13 +302,17 @@ namespace GeradorDeCurriculo
         private System.Windows.Forms.Button Fecharbutton;
         private System.Windows.Forms.Label StatusBuscalabel;
         private System.Windows.Forms.BindingSource dadosPessoaisBindingSource1;
+        private System.Windows.Forms.BindingSource vagasBindingSource;
+        private System.Windows.Forms.BindingSource vagasBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataNascimento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bairroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tituloVagaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn atividadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn requisitosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nacionalidadeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoVagaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDEmpresaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource vagasBindingSource2;
     }
 }

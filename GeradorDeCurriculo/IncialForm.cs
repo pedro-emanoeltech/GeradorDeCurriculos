@@ -13,9 +13,9 @@ using GeradorDeCurriculo.Dados.Mapeamento;
 
 namespace GeradorDeCurriculo
 {
-    public partial class TelaInicalForm : Form
+    public partial class IncialForm : Form
     {
-        public TelaInicalForm()
+        public IncialForm()
         {
             InitializeComponent();
           
@@ -35,7 +35,7 @@ namespace GeradorDeCurriculo
         private void curriculoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            TelacurriculoForm telacurriculo = new TelacurriculoForm();
+            ConsultaCurriculoForm telacurriculo = new ConsultaCurriculoForm();
             telacurriculo.MdiParent = this;
             telacurriculo.Show();
             telacurriculo.WindowState = FormWindowState.Maximized;
@@ -62,7 +62,7 @@ namespace GeradorDeCurriculo
             if (dados != null)
             {
 
-                TelaEmpresaForm empresa = new TelaEmpresaForm(dados.ID);
+                EmpresaForm empresa = new EmpresaForm(dados.ID);
                 empresa.MdiParent = this;
                 empresa.Show();
                 empresa.WindowState = FormWindowState.Maximized;
@@ -70,7 +70,7 @@ namespace GeradorDeCurriculo
             }
             else
             {
-                TelaEmpresaForm empresa = new TelaEmpresaForm();
+                EmpresaForm empresa = new EmpresaForm();
                 empresa.MdiParent = this;
                 empresa.Show();
                 empresa.WindowState = FormWindowState.Maximized;
@@ -84,7 +84,7 @@ namespace GeradorDeCurriculo
         {
            int id =  Ponte.UsuarioLogado.ID;
             
-           UsuariosEditarForm editarusuario= new UsuariosEditarForm(id);
+           UsuarioForm editarusuario= new UsuarioForm(id);
             editarusuario.MdiParent = this;
             editarusuario.Show();
             editarusuario.WindowState = FormWindowState.Maximized;
@@ -167,7 +167,7 @@ namespace GeradorDeCurriculo
 
                     Ponte.Candidato = Validardadospessoais;
 
-                    TelaConsultaVagas ConsultaVagas = new TelaConsultaVagas();
+                    ConsultaVagaForm ConsultaVagas = new ConsultaVagaForm();
 
                     ConsultaVagas.MdiParent = this;
                     ConsultaVagas.Show();
@@ -193,7 +193,7 @@ namespace GeradorDeCurriculo
                     Validarempresa = new EmpresaDAO().Buscar(exite.ID);
                     Ponte.Empresa = Validarempresa;
 
-                    TelaConsultaVagas ConsultaVagas = new TelaConsultaVagas();
+                    ConsultaVagaForm ConsultaVagas = new ConsultaVagaForm();
                     ConsultaVagas.MdiParent = this;
                     ConsultaVagas.Show();
                     ConsultaVagas.WindowState = FormWindowState.Maximized;

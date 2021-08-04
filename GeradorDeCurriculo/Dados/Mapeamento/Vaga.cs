@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeradorDeCurriculo.Dados.Mapeamento
 {
-    public class Vagas
+    public class Vaga
     {
         public int ID { get; set; }
         public string TituloVaga { get; set; }
@@ -16,7 +16,7 @@ namespace GeradorDeCurriculo.Dados.Mapeamento
         public  decimal Salario { get; set; }
         public string Cidade { get; set; }
         public string TipoVaga { get; set; }
-        public string IDEmpresa{ get; set; }
+        public int IDEmpresa{ get; set; }
        
 
     }

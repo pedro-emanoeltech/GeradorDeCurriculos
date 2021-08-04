@@ -12,11 +12,11 @@ using GeradorDeCurriculo.Dados.Mapeamento;
 
 namespace GeradorDeCurriculo
 {
-    public partial class TelaEmpresaForm : Form
+    public partial class EmpresaForm : Form
     {
         Empresa CadEmpresa = null;
-        Usuarios UsuarioGravar = null;
-        public TelaEmpresaForm()
+        Usuario UsuarioGravar = null;
+        public EmpresaForm()
         {
             InitializeComponent();
             Application.DoEvents();
@@ -25,11 +25,11 @@ namespace GeradorDeCurriculo
             IDEmpresatextBox.Text = "Automatico";
             IDEmpresatextBox.Enabled = false;
             CadEmpresa = new Empresa();
-            UsuarioGravar = new Usuarios();
+            UsuarioGravar = new Usuario();
 
         }
 
-        public TelaEmpresaForm(int id)
+        public EmpresaForm(int id)
         {
             InitializeComponent();
             Application.DoEvents();

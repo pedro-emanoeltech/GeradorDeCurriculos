@@ -12,22 +12,22 @@ using GeradorDeCurriculo.Dados.Mapeamento;
 
 namespace GeradorDeCurriculo
 {
-    public partial class VagaEditarForm : Form
+    public partial class VagaForm : Form
     {
 
 
-        Vagas vagas = null;
+        Vaga vagas = null;
         Empresa Empresavaga = null;
-        public VagaEditarForm()
+        public VagaForm()
         {
             InitializeComponent();
             Application.DoEvents();
 
             this.Text = "Nova Vaga";
-            IDDadosPessoaistextBox.Text = "Automático";
-            IDDadosPessoaistextBox.Enabled = false;
+            IDVagaTextBox.Text = "Automático";
+            IDVagaTextBox.Enabled = false;
             ExcluirVagaButton.Enabled = false;
-            vagas = new Vagas();
+            vagas = new Vaga();
             Candidatarbutton.Enabled = false;
             EmpresaVagatextBox.Enabled = false;
             SetorEmpresaVagatextBox.Enabled = false;
@@ -41,7 +41,7 @@ namespace GeradorDeCurriculo
 
         }
 
-        public VagaEditarForm(int id)
+        public VagaForm(int id)
         {
             InitializeComponent();
             Application.DoEvents();
@@ -61,7 +61,7 @@ namespace GeradorDeCurriculo
                 IDEmpresaVagatextBox.Enabled = false;
                 
                 GravarVagabutton.Enabled = false;
-                IDDadosPessoaistextBox.Enabled = false;
+                IDVagaTextBox.Enabled = false;
                 TituloVagatextBox.Enabled = false;
                 DescricaoVagatextBox.Enabled = false;
                 CidadeVagatextBox.Enabled = false;
@@ -75,15 +75,16 @@ namespace GeradorDeCurriculo
                 EmpresaVagatextBox.Enabled = false;
                 SetorEmpresaVagatextBox.Enabled = false;
                 CidadeEmpresatextBox.Enabled = false;
-                
 
 
 
-                vagas = new VagasDAO().Buscar(id);
-                IDDadosPessoaistextBox.Enabled = false;
+
+                // preencher dados da vaga
+                 vagas = new VagasDAO().Buscar(id);
+                IDVagaTextBox.Enabled = false;
                 ExcluirVagaButton.Enabled = true;
 
-                IDDadosPessoaistextBox.Text = vagas.ID.ToString().Trim();
+                IDVagaTextBox.Text = vagas.ID.ToString().Trim();
                 TituloVagatextBox.Text = vagas.TituloVaga.ToString().Trim();
                 DescricaoVagatextBox.Text = vagas.Descricao.ToString().Trim();
                 CidadeVagatextBox.Text = vagas.Cidade.ToString().Trim();
@@ -92,10 +93,11 @@ namespace GeradorDeCurriculo
                 RequisitosVagatextBox.Text = vagas.Requisitos.ToString().Trim();
                 AtividadeVagatextBox.Text = vagas.Atividade.ToString().Trim();
 
+                //preencher dados da empresa 
 
                 Empresavaga = new EmpresaDAO().Buscar(Convert.ToInt32(vagas.IDEmpresa));
 
-                //empresa 
+              
                 IDEmpresaVagatextBox.Text = Empresavaga.ID.ToString().Trim();
                 EmpresaVagatextBox.Text = Empresavaga.Nome.ToString().Trim();
                 SetorEmpresaVagatextBox.Text = Empresavaga.Setor.ToString().Trim();
@@ -118,10 +120,10 @@ namespace GeradorDeCurriculo
                 this.Text = "Alteraçao Curriculo";
 
                 vagas = new VagasDAO().Buscar(id);
-                IDDadosPessoaistextBox.Enabled = false;
+                IDVagaTextBox.Enabled = false;
                 ExcluirVagaButton.Enabled = true;
 
-                IDDadosPessoaistextBox.Text = vagas.ID.ToString().Trim();
+                IDVagaTextBox.Text = vagas.ID.ToString().Trim();
                 TituloVagatextBox.Text = vagas.TituloVaga.ToString().Trim();
                 DescricaoVagatextBox.Text = vagas.Descricao.ToString().Trim();
                 CidadeVagatextBox.Text = vagas.Cidade.ToString().Trim();
@@ -202,15 +204,15 @@ namespace GeradorDeCurriculo
           
             bool tipologado = Ponte.UsuarioLogado.AcessoCurriculo;
             int idUsuario = Ponte.UsuarioLogado.ID;
-
+           
 
             if (tipologado == true)
             {
 
-                int idvaga = Convert.ToInt32(IDDadosPessoaistextBox.Text);
-                vagas = new Vagas();
+                int idvaga = Convert.ToInt32(IDVagaTextBox.Text);
+                vagas = new Vaga();
                 vagas = new VagasDAO().Buscar(idvaga);
-                var Listar = new CandidaturasDAO().ListarCandidato(idvaga, Ponte.Candidato.ID);
+                var Listar = new CandidaturaDAO().ListarCandidato(idvaga, Ponte.Candidato.ID);
                 
 
                 CandidatosdataGridView.DataSource = Listar;
@@ -232,7 +234,7 @@ namespace GeradorDeCurriculo
 
                 
 
-                 var candidatura = new CandidaturasDAO().Buscar(idvaga, Ponte.Candidato.ID);
+                 var candidatura = new CandidaturaDAO().Buscar(idvaga, Ponte.Candidato.ID);
 
                 NomeVagatextBox.Text = vagas.TituloVaga.ToString().Trim();
 
@@ -249,7 +251,7 @@ namespace GeradorDeCurriculo
                     CanditatarSalvarbutton.Enabled = false;
                     DeletarCandidaturabutton.Enabled = true;
                     AprovadocheckBox.Checked = candidatura.Situacao;
-                    InstrucaoVagatextBox.Text = Convert.ToString(candidatura.instrucoes);
+                    InstrucaoVagatextBox.Text = Convert.ToString(candidatura.Instrucoes);
                     DataCadastroTimePicker.Value = candidatura.DataCadastro.Date;
 
 
@@ -283,8 +285,8 @@ namespace GeradorDeCurriculo
                 BuscarCurriculobutton.Enabled = false;
 
 
-                int id = Convert.ToInt32(IDDadosPessoaistextBox.Text);
-                var Listar = new CandidaturasDAO().Listar(id);
+                int id = Convert.ToInt32(IDVagaTextBox.Text);
+                var Listar = new CandidaturaDAO().Listar(id);
 
 
                 CandidatosdataGridView.DataSource = Listar;
@@ -411,7 +413,7 @@ namespace GeradorDeCurriculo
         {
             if (MessageBox.Show("Deseja Realmente Excluir a Vaga :\n Será deletado todo Registro vinculado ao Cadastro: " + vagas.TituloVaga + "?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                int id = Convert.ToInt32(IDDadosPessoaistextBox.Text);
+                int id = Convert.ToInt32(IDVagaTextBox.Text);
                 var vagas = new VagasDAO().Excluir(id);
                 if (vagas)
                 {
@@ -448,7 +450,7 @@ namespace GeradorDeCurriculo
             {
                 int id = Convert.ToInt32(IDdadospessoaisVagatextBox.Text);
            
-                var candidaturas= new CandidaturasDAO().Excluir(id);
+                var candidaturas= new CandidaturaDAO().Excluir(id);
                 if (candidaturas)
                 {
 
@@ -483,12 +485,14 @@ namespace GeradorDeCurriculo
             vagas.Salario = Convert.ToDecimal( SalarioVagatextBox.Text.Trim());
             vagas.Requisitos = RequisitosVagatextBox.Text.Trim();
             vagas.Atividade = AtividadeVagatextBox.Text.Trim();
-
-
            
+            vagas.IDEmpresa = Convert.ToInt32(Empresavaga.ID.ToString());
 
 
-           
+
+
+
+
             var gravar = new VagasDAO().Salvar(vagas);
 
 
@@ -558,7 +562,7 @@ namespace GeradorDeCurriculo
         private void BuscarCurriculobutton_Click(object sender, EventArgs e)
         {
            
-                new CurriculoEditarForm(Convert.ToInt32(IDdadospessoaisVagatextBox.Text)).ShowDialog();
+                new CurriculoForm(Convert.ToInt32(IDdadospessoaisVagatextBox.Text)).ShowDialog();
 
           
             
@@ -566,17 +570,17 @@ namespace GeradorDeCurriculo
 
         private void CanditatarSalvarbutton_Click(object sender, EventArgs e)
         {
-            Candidaturas candidaturas = new Candidaturas();
+            Candidatura candidaturas = new Candidatura();
            
-            int idvaga = Convert.ToInt32(IDDadosPessoaistextBox.Text);
-            int iddadospessoais = Convert.ToInt32(IDDadosPessoaistextBox.Text);
+            int idvaga = Convert.ToInt32(IDVagaTextBox.Text);
+            int iddadospessoais = Convert.ToInt32(Ponte.Candidato.ID);
 
             candidaturas.IDDadosPessoais = iddadospessoais;
             candidaturas.IDVaga = idvaga;
             candidaturas.DataCadastro = Convert.ToDateTime(DataCadastroTimePicker.Value.Date);
             candidaturas.CurriculoNome = NomeVagatextBox.Text.ToString().Trim();
 
-            var gravar = new CandidaturasDAO().Salvar(candidaturas);
+            var gravar = new CandidaturaDAO().Salvar(candidaturas);
 
             if (gravar == 0)
                 MessageBox.Show("Erro ao Gravar!");

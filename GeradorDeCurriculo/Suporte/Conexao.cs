@@ -16,10 +16,9 @@ namespace GeradorDeCurriculo.Suporte
 
         public Conexao()
         {
+            //conexao com o banco utilizando o acessoDB Endereço está no App.config
             var str = System.Configuration.ConfigurationManager.AppSettings["acessoDB"];
             acessoDB = new SqlConnection(str);
-
-
         }
 
     }

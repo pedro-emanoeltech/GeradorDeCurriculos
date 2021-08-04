@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace GeradorDeCurriculo
 {
-    public partial class TelaConsultaVagas : Form
+    public partial class ConsultaVagaForm : Form
     {
         bool tipologado = Ponte.UsuarioLogado.AcessoCurriculo;
         int idUsuario = Ponte.UsuarioLogado.ID;
-        public TelaConsultaVagas()
+        public ConsultaVagaForm()
         {
             InitializeComponent();
             Application.DoEvents();
@@ -132,7 +132,7 @@ namespace GeradorDeCurriculo
             if (id > 0)
             {
 
-                new VagaEditarForm(id).ShowDialog();
+                new VagaForm(id).ShowDialog();
                 Listar();
             }
             
@@ -140,7 +140,7 @@ namespace GeradorDeCurriculo
 
         private void Incluirbutton_Click(object sender, EventArgs e)
         {
-            new VagaEditarForm().ShowDialog();
+            new VagaForm().ShowDialog();
             Listar();
         }
 

@@ -1,7 +1,7 @@
 ﻿
 namespace GeradorDeCurriculo
 {
-    partial class VagaEditarForm
+    partial class VagaForm
     {
         /// <summary>
         /// Required designer variable.
@@ -60,7 +60,7 @@ namespace GeradorDeCurriculo
             this.label6 = new System.Windows.Forms.Label();
             this.TituloVagatextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.IDDadosPessoaistextBox = new System.Windows.Forms.TextBox();
+            this.IDVagaTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CandidatartabPage = new System.Windows.Forms.TabPage();
             this.BuscarCurriculobutton = new System.Windows.Forms.Button();
@@ -146,7 +146,7 @@ namespace GeradorDeCurriculo
             this.VagatabPage.Controls.Add(this.label6);
             this.VagatabPage.Controls.Add(this.TituloVagatextBox);
             this.VagatabPage.Controls.Add(this.label5);
-            this.VagatabPage.Controls.Add(this.IDDadosPessoaistextBox);
+            this.VagatabPage.Controls.Add(this.IDVagaTextBox);
             this.VagatabPage.Controls.Add(this.label1);
             this.VagatabPage.Location = new System.Drawing.Point(24, 4);
             this.VagatabPage.Name = "VagatabPage";
@@ -394,12 +394,12 @@ namespace GeradorDeCurriculo
             this.label5.Text = "ID:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // IDDadosPessoaistextBox
+            // IDVagaTextBox
             // 
-            this.IDDadosPessoaistextBox.Location = new System.Drawing.Point(11, 56);
-            this.IDDadosPessoaistextBox.Name = "IDDadosPessoaistextBox";
-            this.IDDadosPessoaistextBox.Size = new System.Drawing.Size(51, 20);
-            this.IDDadosPessoaistextBox.TabIndex = 1;
+            this.IDVagaTextBox.Location = new System.Drawing.Point(11, 56);
+            this.IDVagaTextBox.Name = "IDVagaTextBox";
+            this.IDVagaTextBox.Size = new System.Drawing.Size(51, 20);
+            this.IDVagaTextBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -603,7 +603,7 @@ namespace GeradorDeCurriculo
             this.fecharCandidaturabutton.Name = "fecharCandidaturabutton";
             this.fecharCandidaturabutton.Size = new System.Drawing.Size(75, 23);
             this.fecharCandidaturabutton.TabIndex = 7;
-            this.fecharCandidaturabutton.Text = "Cancelar";
+            this.fecharCandidaturabutton.Text = "Fechar";
             this.fecharCandidaturabutton.UseVisualStyleBackColor = true;
             this.fecharCandidaturabutton.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -715,11 +715,11 @@ namespace GeradorDeCurriculo
             // 
             // candidaturasBindingSource1
             // 
-            this.candidaturasBindingSource1.DataSource = typeof(GeradorDeCurriculo.Dados.Mapeamento.Candidaturas);
+            this.candidaturasBindingSource1.DataSource = typeof(GeradorDeCurriculo.Dados.Mapeamento.Candidatura);
             // 
             // candidaturasBindingSource
             // 
-            this.candidaturasBindingSource.DataSource = typeof(GeradorDeCurriculo.Dados.Mapeamento.Candidaturas);
+            this.candidaturasBindingSource.DataSource = typeof(GeradorDeCurriculo.Dados.Mapeamento.Candidatura);
             // 
             // VagaEditarForm
             // 
@@ -732,7 +732,7 @@ namespace GeradorDeCurriculo
             this.Controls.Add(this.GeraltabControl);
             this.Name = "VagaEditarForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CurriculoEditarForm";
+            this.Text = "Vaga";
             this.Load += new System.EventHandler(this.CurriculoEditarForm_Load);
             this.GeraltabControl.ResumeLayout(false);
             this.VagatabPage.ResumeLayout(false);
@@ -756,7 +756,7 @@ namespace GeradorDeCurriculo
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox IDDadosPessoaistextBox;
+        private System.Windows.Forms.TextBox IDVagaTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TituloVagatextBox;

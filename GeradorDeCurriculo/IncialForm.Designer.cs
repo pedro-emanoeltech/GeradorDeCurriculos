@@ -1,7 +1,7 @@
 ﻿
 namespace GeradorDeCurriculo
 {
-    partial class TelaInicalForm
+    partial class IncialForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace GeradorDeCurriculo
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaInicalForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IncialForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.EntrarTelaLoginButton = new System.Windows.Forms.ToolStripButton();
             this.GerarCurriculoStripButton1 = new System.Windows.Forms.ToolStripButton();

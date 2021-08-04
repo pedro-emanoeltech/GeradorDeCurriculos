@@ -12,6 +12,7 @@ namespace GeradorDeCurriculo.Dados.Mapeamento
         public string Curso { get; set; }
         public string FormacaoNivel { get; set; }
         public string Status { get; set; }
+
         // datatime? para aceitar null
         public DateTime? Inicio { get; set; }
         public DateTime? Termino { get; set; }

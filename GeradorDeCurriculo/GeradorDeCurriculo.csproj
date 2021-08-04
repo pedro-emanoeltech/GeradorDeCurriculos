@@ -69,38 +69,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dados\DAL\CandidaturasDAO.cs" />
+    <Compile Include="Dados\DAL\CandidaturaDAO.cs" />
     <Compile Include="Dados\DAL\VagaDAO.cs" />
-    <Compile Include="GeradorPDFForm.cs">
+    <Compile Include="VagaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GeradorPDFForm.Designer.cs">
-      <DependentUpon>GeradorPDFForm.cs</DependentUpon>
+    <Compile Include="VagaForm.Designer.cs">
+      <DependentUpon>VagaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="VagaEditarForm.cs">
+    <Compile Include="CurriculoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VagaEditarForm.Designer.cs">
-      <DependentUpon>VagaEditarForm.cs</DependentUpon>
+    <Compile Include="CurriculoForm.Designer.cs">
+      <DependentUpon>CurriculoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CurriculoEditarForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CurriculoEditarForm.Designer.cs">
-      <DependentUpon>CurriculoEditarForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dados\DAL\UsuariosDAO.cs" />
+    <Compile Include="Dados\DAL\UsuarioDAO.cs" />
     <Compile Include="Dados\DAL\EmpresaDAO.cs" />
     <Compile Include="Dados\DAL\FormacaoDAO.cs" />
     <Compile Include="Dados\DAL\ExperienciaProfissionalDAO.cs" />
     <Compile Include="Dados\DAL\DadosPessoaisDAO.cs" />
-    <Compile Include="Dados\Mapeamento\Candidaturas.cs" />
-    <Compile Include="Dados\Mapeamento\Vagas.cs" />
+    <Compile Include="Dados\Mapeamento\Candidatura.cs" />
+    <Compile Include="Dados\Mapeamento\Vaga.cs" />
     <Compile Include="Dados\Mapeamento\Empresa.cs" />
     <Compile Include="Dados\Mapeamento\DadosPessoais.cs" />
     <Compile Include="Dados\Mapeamento\ExperienciaProfissional.cs" />
     <Compile Include="Dados\Mapeamento\Formacao.cs" />
-    <Compile Include="Dados\Mapeamento\Usuarios.cs" />
+    <Compile Include="Dados\Mapeamento\Usuario.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,71 +102,62 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Suporte\Ponte.cs" />
-    <Compile Include="TelaConsultaVagas.cs">
+    <Compile Include="ConsultaVagaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaConsultaVagas.Designer.cs">
-      <DependentUpon>TelaConsultaVagas.cs</DependentUpon>
+    <Compile Include="ConsultaVagaForm.Designer.cs">
+      <DependentUpon>ConsultaVagaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaUsuarios.cs">
+    <Compile Include="UsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaUsuarios.Designer.cs">
-      <DependentUpon>TelaUsuarios.cs</DependentUpon>
+    <Compile Include="UsuarioForm.Designer.cs">
+      <DependentUpon>UsuarioForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsuariosEditarForm.cs">
+    <Compile Include="EmpresaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsuariosEditarForm.Designer.cs">
-      <DependentUpon>UsuariosEditarForm.cs</DependentUpon>
+    <Compile Include="EmpresaForm.Designer.cs">
+      <DependentUpon>EmpresaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaEmpresaForm.cs">
+    <Compile Include="IncialForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaEmpresaForm.Designer.cs">
-      <DependentUpon>TelaEmpresaForm.cs</DependentUpon>
+    <Compile Include="IncialForm.Designer.cs">
+      <DependentUpon>IncialForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaInicalForm.cs">
+    <Compile Include="ConsultaCurriculoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaInicalForm.Designer.cs">
-      <DependentUpon>TelaInicalForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TelacurriculoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TelacurriculoForm.Designer.cs">
-      <DependentUpon>TelacurriculoForm.cs</DependentUpon>
+    <Compile Include="ConsultaCurriculoForm.Designer.cs">
+      <DependentUpon>ConsultaCurriculoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Suporte\Conexao.cs" />
-    <EmbeddedResource Include="VagaEditarForm.resx">
-      <DependentUpon>VagaEditarForm.cs</DependentUpon>
+    <EmbeddedResource Include="VagaForm.resx">
+      <DependentUpon>VagaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CurriculoEditarForm.resx">
-      <DependentUpon>CurriculoEditarForm.cs</DependentUpon>
+    <EmbeddedResource Include="CurriculoForm.resx">
+      <DependentUpon>CurriculoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaConsultaVagas.resx">
-      <DependentUpon>TelaConsultaVagas.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultaVagaForm.resx">
+      <DependentUpon>ConsultaVagaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaUsuarios.resx">
-      <DependentUpon>TelaUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="UsuarioForm.resx">
+      <DependentUpon>UsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsuariosEditarForm.resx">
-      <DependentUpon>UsuariosEditarForm.cs</DependentUpon>
+    <EmbeddedResource Include="EmpresaForm.resx">
+      <DependentUpon>EmpresaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaEmpresaForm.resx">
-      <DependentUpon>TelaEmpresaForm.cs</DependentUpon>
+    <EmbeddedResource Include="IncialForm.resx">
+      <DependentUpon>IncialForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaInicalForm.resx">
-      <DependentUpon>TelaInicalForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelacurriculoForm.resx">
-      <DependentUpon>TelacurriculoForm.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultaCurriculoForm.resx">
+      <DependentUpon>ConsultaCurriculoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

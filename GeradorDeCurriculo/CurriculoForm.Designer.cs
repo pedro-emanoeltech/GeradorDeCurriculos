@@ -1,7 +1,7 @@
 ﻿
 namespace GeradorDeCurriculo
 {
-    partial class CurriculoEditarForm
+    partial class CurriculoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,8 @@ namespace GeradorDeCurriculo
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GeraltabControl = new System.Windows.Forms.TabControl();
             this.DadosPessoaistabPage = new System.Windows.Forms.TabPage();
             this.DataNascimentodateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -63,7 +65,15 @@ namespace GeradorDeCurriculo
             this.IDexpProfissionaltextBox = new System.Windows.Forms.TextBox();
             this.DeletarExperienciaProfissionalbutton = new System.Windows.Forms.Button();
             this.ExperienciaprofdataGridView = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.segmentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDadosPessoaisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dadosPessoaisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.experienciaProfissionalBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.label19 = new System.Windows.Forms.Label();
             this.DescricaoExperienciaProfissionaltextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -86,6 +96,16 @@ namespace GeradorDeCurriculo
             this.StatusFormacaotextBox = new System.Windows.Forms.TextBox();
             this.EditarFormacaobutton = new System.Windows.Forms.Button();
             this.FormacaoGridView = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formacaoNivelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.terminoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDadosPessoaisDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dadosPessoaisDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formacaoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.ConclusaodateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label26 = new System.Windows.Forms.Label();
             this.InicioformacaodateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -101,32 +121,44 @@ namespace GeradorDeCurriculo
             this.CursoformacaotextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.UsuariotabPage = new System.Windows.Forms.TabPage();
+            this.QtFormacaoGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Formacaolabel = new System.Windows.Forms.Label();
+            this.QtCandidaturasAprovaDadataGridView = new System.Windows.Forms.DataGridView();
+            this.QtCandidaturasDataGridView = new System.Windows.Forms.DataGridView();
+            this.QtExperienciaProfissionallistDataGridView = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empresaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.segmentoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDadosPessoaisDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dadosPessoaisDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QtExperienciaProfissionallabel = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.StatusEditarLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.DadosPessoaisbutton = new System.Windows.Forms.Button();
             this.ExperienciaProfissionalbutton = new System.Windows.Forms.Button();
             this.Formacaobutton = new System.Windows.Forms.Button();
-            this.Usuariobutton = new System.Windows.Forms.Button();
+            this.Candidaturas = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.segmentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDadosPessoaisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dadosPessoaisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.experienciaProfissionalBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formacaoNivelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.terminoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDadosPessoaisDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dadosPessoaisDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formacaoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.formacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.formacaoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.formacaoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -136,12 +168,16 @@ namespace GeradorDeCurriculo
             this.DadosPessoaistabPage.SuspendLayout();
             this.ExperienciaProfissionaltabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExperienciaprofdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.experienciaProfissionalBindingSource2)).BeginInit();
             this.FormacaotabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FormacaoGridView)).BeginInit();
-            this.UsuariotabPage.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.experienciaProfissionalBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formacaoBindingSource3)).BeginInit();
+            this.UsuariotabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QtFormacaoGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QtCandidaturasAprovaDadataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QtCandidaturasDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QtExperienciaProfissionallistDataGridView)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.formacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formacaoBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formacaoBindingSource1)).BeginInit();
@@ -285,6 +321,7 @@ namespace GeradorDeCurriculo
             this.NacionalidadeDadosPessoaistextBox.Name = "NacionalidadeDadosPessoaistextBox";
             this.NacionalidadeDadosPessoaistextBox.Size = new System.Drawing.Size(178, 20);
             this.NacionalidadeDadosPessoaistextBox.TabIndex = 1;
+            this.NacionalidadeDadosPessoaistextBox.TextChanged += new System.EventHandler(this.NacionalidadeDadosPessoaistextBox_TextChanged);
             // 
             // label10
             // 
@@ -333,6 +370,7 @@ namespace GeradorDeCurriculo
             this.EnderecoDadosPessoaistextBox.Name = "EnderecoDadosPessoaistextBox";
             this.EnderecoDadosPessoaistextBox.Size = new System.Drawing.Size(427, 20);
             this.EnderecoDadosPessoaistextBox.TabIndex = 3;
+            this.EnderecoDadosPessoaistextBox.TextChanged += new System.EventHandler(this.EnderecoDadosPessoaistextBox_TextChanged);
             // 
             // label7
             // 
@@ -476,12 +514,72 @@ namespace GeradorDeCurriculo
             this.ExperienciaprofdataGridView.TabIndex = 35;
             this.ExperienciaprofdataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExperienciaprofdataGridView_CellContentClick);
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // empresaDataGridViewTextBoxColumn
+            // 
+            this.empresaDataGridViewTextBoxColumn.DataPropertyName = "Empresa";
+            this.empresaDataGridViewTextBoxColumn.HeaderText = "Empresa";
+            this.empresaDataGridViewTextBoxColumn.Name = "empresaDataGridViewTextBoxColumn";
+            this.empresaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cargoDataGridViewTextBoxColumn
+            // 
+            this.cargoDataGridViewTextBoxColumn.DataPropertyName = "Cargo";
+            this.cargoDataGridViewTextBoxColumn.FillWeight = 200F;
+            this.cargoDataGridViewTextBoxColumn.HeaderText = "Cargo";
+            this.cargoDataGridViewTextBoxColumn.Name = "cargoDataGridViewTextBoxColumn";
+            this.cargoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // segmentoDataGridViewTextBoxColumn
+            // 
+            this.segmentoDataGridViewTextBoxColumn.DataPropertyName = "Segmento";
+            this.segmentoDataGridViewTextBoxColumn.HeaderText = "Segmento";
+            this.segmentoDataGridViewTextBoxColumn.Name = "segmentoDataGridViewTextBoxColumn";
+            this.segmentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // salarioDataGridViewTextBoxColumn
+            // 
+            this.salarioDataGridViewTextBoxColumn.DataPropertyName = "Salario";
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.salarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.salarioDataGridViewTextBoxColumn.HeaderText = "Salario";
+            this.salarioDataGridViewTextBoxColumn.Name = "salarioDataGridViewTextBoxColumn";
+            this.salarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Descricao
             // 
             this.Descricao.DataPropertyName = "Descricao";
             this.Descricao.HeaderText = "Descricao";
             this.Descricao.Name = "Descricao";
             this.Descricao.ReadOnly = true;
+            // 
+            // iDDadosPessoaisDataGridViewTextBoxColumn
+            // 
+            this.iDDadosPessoaisDataGridViewTextBoxColumn.DataPropertyName = "IDDadosPessoais";
+            this.iDDadosPessoaisDataGridViewTextBoxColumn.HeaderText = "IDDadosPessoais";
+            this.iDDadosPessoaisDataGridViewTextBoxColumn.Name = "iDDadosPessoaisDataGridViewTextBoxColumn";
+            this.iDDadosPessoaisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDadosPessoaisDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dadosPessoaisDataGridViewTextBoxColumn
+            // 
+            this.dadosPessoaisDataGridViewTextBoxColumn.DataPropertyName = "dadosPessoais";
+            this.dadosPessoaisDataGridViewTextBoxColumn.HeaderText = "dadosPessoais";
+            this.dadosPessoaisDataGridViewTextBoxColumn.Name = "dadosPessoaisDataGridViewTextBoxColumn";
+            this.dadosPessoaisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dadosPessoaisDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // experienciaProfissionalBindingSource2
+            // 
+            this.experienciaProfissionalBindingSource2.DataSource = typeof(GeradorDeCurriculo.Dados.Mapeamento.ExperienciaProfissional);
             // 
             // label19
             // 
@@ -715,6 +813,80 @@ namespace GeradorDeCurriculo
             this.FormacaoGridView.Size = new System.Drawing.Size(582, 150);
             this.FormacaoGridView.TabIndex = 53;
             // 
+            // iDDataGridViewTextBoxColumn1
+            // 
+            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            this.iDDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // cursoDataGridViewTextBoxColumn
+            // 
+            this.cursoDataGridViewTextBoxColumn.DataPropertyName = "Curso";
+            this.cursoDataGridViewTextBoxColumn.HeaderText = "Curso";
+            this.cursoDataGridViewTextBoxColumn.Name = "cursoDataGridViewTextBoxColumn";
+            this.cursoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // formacaoNivelDataGridViewTextBoxColumn
+            // 
+            this.formacaoNivelDataGridViewTextBoxColumn.DataPropertyName = "FormacaoNivel";
+            this.formacaoNivelDataGridViewTextBoxColumn.HeaderText = "FormacaoNivel";
+            this.formacaoNivelDataGridViewTextBoxColumn.Name = "formacaoNivelDataGridViewTextBoxColumn";
+            this.formacaoNivelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // inicioDataGridViewTextBoxColumn
+            // 
+            this.inicioDataGridViewTextBoxColumn.DataPropertyName = "Inicio";
+            dataGridViewCellStyle2.NullValue = null;
+            this.inicioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.inicioDataGridViewTextBoxColumn.HeaderText = "Inicio";
+            this.inicioDataGridViewTextBoxColumn.Name = "inicioDataGridViewTextBoxColumn";
+            this.inicioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // terminoDataGridViewTextBoxColumn
+            // 
+            this.terminoDataGridViewTextBoxColumn.DataPropertyName = "Termino";
+            dataGridViewCellStyle3.NullValue = null;
+            this.terminoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.terminoDataGridViewTextBoxColumn.HeaderText = "Termino";
+            this.terminoDataGridViewTextBoxColumn.Name = "terminoDataGridViewTextBoxColumn";
+            this.terminoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iDDadosPessoaisDataGridViewTextBoxColumn1
+            // 
+            this.iDDadosPessoaisDataGridViewTextBoxColumn1.DataPropertyName = "IDDadosPessoais";
+            this.iDDadosPessoaisDataGridViewTextBoxColumn1.HeaderText = "IDDadosPessoais";
+            this.iDDadosPessoaisDataGridViewTextBoxColumn1.Name = "iDDadosPessoaisDataGridViewTextBoxColumn1";
+            this.iDDadosPessoaisDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.iDDadosPessoaisDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dadosPessoaisDataGridViewTextBoxColumn1
+            // 
+            this.dadosPessoaisDataGridViewTextBoxColumn1.DataPropertyName = "dadosPessoais";
+            this.dadosPessoaisDataGridViewTextBoxColumn1.HeaderText = "dadosPessoais";
+            this.dadosPessoaisDataGridViewTextBoxColumn1.Name = "dadosPessoaisDataGridViewTextBoxColumn1";
+            this.dadosPessoaisDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dadosPessoaisDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // formacaoBindingSource3
+            // 
+            this.formacaoBindingSource3.DataSource = typeof(GeradorDeCurriculo.Dados.Mapeamento.Formacao);
+            // 
             // ConclusaodateTimePicker
             // 
             this.ConclusaodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -846,6 +1018,19 @@ namespace GeradorDeCurriculo
             // 
             // UsuariotabPage
             // 
+            this.UsuariotabPage.Controls.Add(this.QtFormacaoGridView);
+            this.UsuariotabPage.Controls.Add(this.Formacaolabel);
+            this.UsuariotabPage.Controls.Add(this.QtCandidaturasAprovaDadataGridView);
+            this.UsuariotabPage.Controls.Add(this.QtCandidaturasDataGridView);
+            this.UsuariotabPage.Controls.Add(this.QtExperienciaProfissionallistDataGridView);
+            this.UsuariotabPage.Controls.Add(this.QtExperienciaProfissionallabel);
+            this.UsuariotabPage.Controls.Add(this.label32);
+            this.UsuariotabPage.Controls.Add(this.label33);
+            this.UsuariotabPage.Controls.Add(this.label30);
+            this.UsuariotabPage.Controls.Add(this.label31);
+            this.UsuariotabPage.Controls.Add(this.label29);
+            this.UsuariotabPage.Controls.Add(this.label28);
+            this.UsuariotabPage.Controls.Add(this.label27);
             this.UsuariotabPage.Controls.Add(this.label4);
             this.UsuariotabPage.Location = new System.Drawing.Point(24, 4);
             this.UsuariotabPage.Name = "UsuariotabPage";
@@ -854,15 +1039,305 @@ namespace GeradorDeCurriculo
             this.UsuariotabPage.TabIndex = 3;
             this.UsuariotabPage.UseVisualStyleBackColor = true;
             // 
+            // QtFormacaoGridView
+            // 
+            this.QtFormacaoGridView.AllowUserToAddRows = false;
+            this.QtFormacaoGridView.AllowUserToDeleteRows = false;
+            this.QtFormacaoGridView.AutoGenerateColumns = false;
+            this.QtFormacaoGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.QtFormacaoGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.QtFormacaoGridView.DataSource = this.formacaoBindingSource3;
+            this.QtFormacaoGridView.EnableHeadersVisualStyles = false;
+            this.QtFormacaoGridView.Location = new System.Drawing.Point(342, 61);
+            this.QtFormacaoGridView.Name = "QtFormacaoGridView";
+            this.QtFormacaoGridView.ReadOnly = true;
+            this.QtFormacaoGridView.RowHeadersVisible = false;
+            this.QtFormacaoGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.QtFormacaoGridView.Size = new System.Drawing.Size(295, 114);
+            this.QtFormacaoGridView.TabIndex = 70;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Curso";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Curso";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "FormacaoNivel";
+            this.dataGridViewTextBoxColumn3.HeaderText = "FormacaoNivel";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Status";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Inicio";
+            dataGridViewCellStyle4.NullValue = null;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Inicio";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Termino";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Termino";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Descricao";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Descricao";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "IDDadosPessoais";
+            this.dataGridViewTextBoxColumn8.HeaderText = "IDDadosPessoais";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "dadosPessoais";
+            this.dataGridViewTextBoxColumn9.HeaderText = "dadosPessoais";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Visible = false;
+            // 
+            // Formacaolabel
+            // 
+            this.Formacaolabel.AutoSize = true;
+            this.Formacaolabel.Location = new System.Drawing.Point(531, 45);
+            this.Formacaolabel.Name = "Formacaolabel";
+            this.Formacaolabel.Size = new System.Drawing.Size(16, 13);
+            this.Formacaolabel.TabIndex = 69;
+            this.Formacaolabel.Text = "...";
+            // 
+            // QtCandidaturasAprovaDadataGridView
+            // 
+            this.QtCandidaturasAprovaDadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.QtCandidaturasAprovaDadataGridView.Location = new System.Drawing.Point(336, 275);
+            this.QtCandidaturasAprovaDadataGridView.Name = "QtCandidaturasAprovaDadataGridView";
+            this.QtCandidaturasAprovaDadataGridView.Size = new System.Drawing.Size(295, 114);
+            this.QtCandidaturasAprovaDadataGridView.TabIndex = 68;
+            // 
+            // QtCandidaturasDataGridView
+            // 
+            this.QtCandidaturasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.QtCandidaturasDataGridView.Location = new System.Drawing.Point(21, 275);
+            this.QtCandidaturasDataGridView.Name = "QtCandidaturasDataGridView";
+            this.QtCandidaturasDataGridView.Size = new System.Drawing.Size(268, 114);
+            this.QtCandidaturasDataGridView.TabIndex = 67;
+            // 
+            // QtExperienciaProfissionallistDataGridView
+            // 
+            this.QtExperienciaProfissionallistDataGridView.AllowUserToAddRows = false;
+            this.QtExperienciaProfissionallistDataGridView.AllowUserToDeleteRows = false;
+            this.QtExperienciaProfissionallistDataGridView.AutoGenerateColumns = false;
+            this.QtExperienciaProfissionallistDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.QtExperienciaProfissionallistDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.QtExperienciaProfissionallistDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn2,
+            this.empresaDataGridViewTextBoxColumn1,
+            this.cargoDataGridViewTextBoxColumn1,
+            this.segmentoDataGridViewTextBoxColumn1,
+            this.salarioDataGridViewTextBoxColumn1,
+            this.descricaoDataGridViewTextBoxColumn1,
+            this.iDDadosPessoaisDataGridViewTextBoxColumn2,
+            this.dadosPessoaisDataGridViewTextBoxColumn2});
+            this.QtExperienciaProfissionallistDataGridView.DataSource = this.experienciaProfissionalBindingSource2;
+            this.QtExperienciaProfissionallistDataGridView.EnableHeadersVisualStyles = false;
+            this.QtExperienciaProfissionallistDataGridView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.QtExperienciaProfissionallistDataGridView.Location = new System.Drawing.Point(27, 61);
+            this.QtExperienciaProfissionallistDataGridView.Name = "QtExperienciaProfissionallistDataGridView";
+            this.QtExperienciaProfissionallistDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.QtExperienciaProfissionallistDataGridView.RowHeadersVisible = false;
+            this.QtExperienciaProfissionallistDataGridView.Size = new System.Drawing.Size(268, 114);
+            this.QtExperienciaProfissionallistDataGridView.TabIndex = 65;
+            // 
+            // iDDataGridViewTextBoxColumn2
+            // 
+            this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
+            this.iDDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // empresaDataGridViewTextBoxColumn1
+            // 
+            this.empresaDataGridViewTextBoxColumn1.DataPropertyName = "Empresa";
+            this.empresaDataGridViewTextBoxColumn1.HeaderText = "Empresa";
+            this.empresaDataGridViewTextBoxColumn1.Name = "empresaDataGridViewTextBoxColumn1";
+            this.empresaDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // cargoDataGridViewTextBoxColumn1
+            // 
+            this.cargoDataGridViewTextBoxColumn1.DataPropertyName = "Cargo";
+            this.cargoDataGridViewTextBoxColumn1.HeaderText = "Cargo";
+            this.cargoDataGridViewTextBoxColumn1.Name = "cargoDataGridViewTextBoxColumn1";
+            this.cargoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.cargoDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // segmentoDataGridViewTextBoxColumn1
+            // 
+            this.segmentoDataGridViewTextBoxColumn1.DataPropertyName = "Segmento";
+            this.segmentoDataGridViewTextBoxColumn1.HeaderText = "Segmento";
+            this.segmentoDataGridViewTextBoxColumn1.Name = "segmentoDataGridViewTextBoxColumn1";
+            this.segmentoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.segmentoDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // salarioDataGridViewTextBoxColumn1
+            // 
+            this.salarioDataGridViewTextBoxColumn1.DataPropertyName = "Salario";
+            this.salarioDataGridViewTextBoxColumn1.HeaderText = "Salario";
+            this.salarioDataGridViewTextBoxColumn1.Name = "salarioDataGridViewTextBoxColumn1";
+            this.salarioDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.salarioDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // descricaoDataGridViewTextBoxColumn1
+            // 
+            this.descricaoDataGridViewTextBoxColumn1.DataPropertyName = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn1.HeaderText = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn1.Name = "descricaoDataGridViewTextBoxColumn1";
+            this.descricaoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.descricaoDataGridViewTextBoxColumn1.Width = 300;
+            // 
+            // iDDadosPessoaisDataGridViewTextBoxColumn2
+            // 
+            this.iDDadosPessoaisDataGridViewTextBoxColumn2.DataPropertyName = "IDDadosPessoais";
+            this.iDDadosPessoaisDataGridViewTextBoxColumn2.HeaderText = "IDDadosPessoais";
+            this.iDDadosPessoaisDataGridViewTextBoxColumn2.Name = "iDDadosPessoaisDataGridViewTextBoxColumn2";
+            this.iDDadosPessoaisDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.iDDadosPessoaisDataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dadosPessoaisDataGridViewTextBoxColumn2
+            // 
+            this.dadosPessoaisDataGridViewTextBoxColumn2.DataPropertyName = "dadosPessoais";
+            this.dadosPessoaisDataGridViewTextBoxColumn2.HeaderText = "dadosPessoais";
+            this.dadosPessoaisDataGridViewTextBoxColumn2.Name = "dadosPessoaisDataGridViewTextBoxColumn2";
+            this.dadosPessoaisDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dadosPessoaisDataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // QtExperienciaProfissionallabel
+            // 
+            this.QtExperienciaProfissionallabel.AutoSize = true;
+            this.QtExperienciaProfissionallabel.Location = new System.Drawing.Point(218, 45);
+            this.QtExperienciaProfissionallabel.Name = "QtExperienciaProfissionallabel";
+            this.QtExperienciaProfissionallabel.Size = new System.Drawing.Size(16, 13);
+            this.QtExperienciaProfissionallabel.TabIndex = 64;
+            this.QtExperienciaProfissionallabel.Text = "...";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(410, 45);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(115, 13);
+            this.label32.TabIndex = 60;
+            this.label32.Text = "Quantidade Formação:";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(78, 45);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(134, 13);
+            this.label33.TabIndex = 58;
+            this.label33.Text = "Experiencias  Profissionais:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(3, 198);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(179, 16);
+            this.label30.TabIndex = 56;
+            this.label30.Text = "Detalhamento Candidato";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(4, 21);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(667, 13);
+            this.label31.TabIndex = 55;
+            this.label31.Text = "_________________________________________________________________________________" +
+    "_____________________________";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(3, 216);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(667, 13);
+            this.label29.TabIndex = 54;
+            this.label29.Text = "_________________________________________________________________________________" +
+    "_____________________________";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(380, 259);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(187, 13);
+            this.label28.TabIndex = 52;
+            this.label28.Text = "Quantidade  Candidaturas Aprovadas:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(62, 259);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(172, 13);
+            this.label27.TabIndex = 50;
+            this.label27.Text = "Quantidade Total de Candidaturas:";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 16);
+            this.label4.Size = new System.Drawing.Size(144, 16);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Editar Usuario:";
+            this.label4.Text = "Detalhamento Perfil";
             // 
             // statusStrip1
             // 
@@ -911,15 +1386,15 @@ namespace GeradorDeCurriculo
             this.Formacaobutton.UseVisualStyleBackColor = true;
             this.Formacaobutton.Click += new System.EventHandler(this.Formacaobutton_Click);
             // 
-            // Usuariobutton
+            // Candidaturas
             // 
-            this.Usuariobutton.Location = new System.Drawing.Point(0, 202);
-            this.Usuariobutton.Name = "Usuariobutton";
-            this.Usuariobutton.Size = new System.Drawing.Size(175, 74);
-            this.Usuariobutton.TabIndex = 3;
-            this.Usuariobutton.Text = "USUÁRIO";
-            this.Usuariobutton.UseVisualStyleBackColor = true;
-            this.Usuariobutton.Click += new System.EventHandler(this.Usuariobutton_Click);
+            this.Candidaturas.Location = new System.Drawing.Point(0, 202);
+            this.Candidaturas.Name = "Candidaturas";
+            this.Candidaturas.Size = new System.Drawing.Size(175, 74);
+            this.Candidaturas.TabIndex = 3;
+            this.Candidaturas.Text = "Candidaturas";
+            this.Candidaturas.UseVisualStyleBackColor = true;
+            this.Candidaturas.Click += new System.EventHandler(this.Usuariobutton_Click);
             // 
             // button5
             // 
@@ -931,143 +1406,10 @@ namespace GeradorDeCurriculo
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // empresaDataGridViewTextBoxColumn
-            // 
-            this.empresaDataGridViewTextBoxColumn.DataPropertyName = "Empresa";
-            this.empresaDataGridViewTextBoxColumn.HeaderText = "Empresa";
-            this.empresaDataGridViewTextBoxColumn.Name = "empresaDataGridViewTextBoxColumn";
-            this.empresaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cargoDataGridViewTextBoxColumn
-            // 
-            this.cargoDataGridViewTextBoxColumn.DataPropertyName = "Cargo";
-            this.cargoDataGridViewTextBoxColumn.FillWeight = 200F;
-            this.cargoDataGridViewTextBoxColumn.HeaderText = "Cargo";
-            this.cargoDataGridViewTextBoxColumn.Name = "cargoDataGridViewTextBoxColumn";
-            this.cargoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // segmentoDataGridViewTextBoxColumn
-            // 
-            this.segmentoDataGridViewTextBoxColumn.DataPropertyName = "Segmento";
-            this.segmentoDataGridViewTextBoxColumn.HeaderText = "Segmento";
-            this.segmentoDataGridViewTextBoxColumn.Name = "segmentoDataGridViewTextBoxColumn";
-            this.segmentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // salarioDataGridViewTextBoxColumn
-            // 
-            this.salarioDataGridViewTextBoxColumn.DataPropertyName = "Salario";
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.salarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.salarioDataGridViewTextBoxColumn.HeaderText = "Salario";
-            this.salarioDataGridViewTextBoxColumn.Name = "salarioDataGridViewTextBoxColumn";
-            this.salarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iDDadosPessoaisDataGridViewTextBoxColumn
-            // 
-            this.iDDadosPessoaisDataGridViewTextBoxColumn.DataPropertyName = "IDDadosPessoais";
-            this.iDDadosPessoaisDataGridViewTextBoxColumn.HeaderText = "IDDadosPessoais";
-            this.iDDadosPessoaisDataGridViewTextBoxColumn.Name = "iDDadosPessoaisDataGridViewTextBoxColumn";
-            this.iDDadosPessoaisDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDadosPessoaisDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dadosPessoaisDataGridViewTextBoxColumn
-            // 
-            this.dadosPessoaisDataGridViewTextBoxColumn.DataPropertyName = "dadosPessoais";
-            this.dadosPessoaisDataGridViewTextBoxColumn.HeaderText = "dadosPessoais";
-            this.dadosPessoaisDataGridViewTextBoxColumn.Name = "dadosPessoaisDataGridViewTextBoxColumn";
-            this.dadosPessoaisDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dadosPessoaisDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // experienciaProfissionalBindingSource2
-            // 
-            this.experienciaProfissionalBindingSource2.DataSource = typeof(GeradorDeCurriculo.Dados.Mapeamento.ExperienciaProfissional);
-            // 
-            // iDDataGridViewTextBoxColumn1
-            // 
-            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
-            this.iDDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // cursoDataGridViewTextBoxColumn
-            // 
-            this.cursoDataGridViewTextBoxColumn.DataPropertyName = "Curso";
-            this.cursoDataGridViewTextBoxColumn.HeaderText = "Curso";
-            this.cursoDataGridViewTextBoxColumn.Name = "cursoDataGridViewTextBoxColumn";
-            this.cursoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // formacaoNivelDataGridViewTextBoxColumn
-            // 
-            this.formacaoNivelDataGridViewTextBoxColumn.DataPropertyName = "FormacaoNivel";
-            this.formacaoNivelDataGridViewTextBoxColumn.HeaderText = "FormacaoNivel";
-            this.formacaoNivelDataGridViewTextBoxColumn.Name = "formacaoNivelDataGridViewTextBoxColumn";
-            this.formacaoNivelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // inicioDataGridViewTextBoxColumn
-            // 
-            this.inicioDataGridViewTextBoxColumn.DataPropertyName = "Inicio";
-            dataGridViewCellStyle2.NullValue = null;
-            this.inicioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.inicioDataGridViewTextBoxColumn.HeaderText = "Inicio";
-            this.inicioDataGridViewTextBoxColumn.Name = "inicioDataGridViewTextBoxColumn";
-            this.inicioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // terminoDataGridViewTextBoxColumn
-            // 
-            this.terminoDataGridViewTextBoxColumn.DataPropertyName = "Termino";
-            dataGridViewCellStyle3.NullValue = null;
-            this.terminoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.terminoDataGridViewTextBoxColumn.HeaderText = "Termino";
-            this.terminoDataGridViewTextBoxColumn.Name = "terminoDataGridViewTextBoxColumn";
-            this.terminoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iDDadosPessoaisDataGridViewTextBoxColumn1
-            // 
-            this.iDDadosPessoaisDataGridViewTextBoxColumn1.DataPropertyName = "IDDadosPessoais";
-            this.iDDadosPessoaisDataGridViewTextBoxColumn1.HeaderText = "IDDadosPessoais";
-            this.iDDadosPessoaisDataGridViewTextBoxColumn1.Name = "iDDadosPessoaisDataGridViewTextBoxColumn1";
-            this.iDDadosPessoaisDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.iDDadosPessoaisDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dadosPessoaisDataGridViewTextBoxColumn1
-            // 
-            this.dadosPessoaisDataGridViewTextBoxColumn1.DataPropertyName = "dadosPessoais";
-            this.dadosPessoaisDataGridViewTextBoxColumn1.HeaderText = "dadosPessoais";
-            this.dadosPessoaisDataGridViewTextBoxColumn1.Name = "dadosPessoaisDataGridViewTextBoxColumn1";
-            this.dadosPessoaisDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dadosPessoaisDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // formacaoBindingSource3
-            // 
-            this.formacaoBindingSource3.DataSource = typeof(GeradorDeCurriculo.Dados.Mapeamento.Formacao);
-            // 
             // formacaoBindingSource
             // 
             this.formacaoBindingSource.DataSource = typeof(GeradorDeCurriculo.Dados.Mapeamento.Formacao);
+            this.formacaoBindingSource.CurrentChanged += new System.EventHandler(this.formacaoBindingSource_CurrentChanged);
             // 
             // formacaoBindingSource2
             // 
@@ -1091,7 +1433,7 @@ namespace GeradorDeCurriculo
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 452);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.Usuariobutton);
+            this.Controls.Add(this.Candidaturas);
             this.Controls.Add(this.Formacaobutton);
             this.Controls.Add(this.ExperienciaProfissionalbutton);
             this.Controls.Add(this.DadosPessoaisbutton);
@@ -1107,15 +1449,19 @@ namespace GeradorDeCurriculo
             this.ExperienciaProfissionaltabPage.ResumeLayout(false);
             this.ExperienciaProfissionaltabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExperienciaprofdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.experienciaProfissionalBindingSource2)).EndInit();
             this.FormacaotabPage.ResumeLayout(false);
             this.FormacaotabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FormacaoGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formacaoBindingSource3)).EndInit();
             this.UsuariotabPage.ResumeLayout(false);
             this.UsuariotabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QtFormacaoGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QtCandidaturasAprovaDadataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QtCandidaturasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QtExperienciaProfissionallistDataGridView)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.experienciaProfissionalBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.formacaoBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.formacaoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.formacaoBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.formacaoBindingSource1)).EndInit();
@@ -1133,7 +1479,7 @@ namespace GeradorDeCurriculo
         private System.Windows.Forms.Button DadosPessoaisbutton;
         private System.Windows.Forms.Button ExperienciaProfissionalbutton;
         private System.Windows.Forms.Button Formacaobutton;
-        private System.Windows.Forms.Button Usuariobutton;
+        private System.Windows.Forms.Button Candidaturas;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TabPage ExperienciaProfissionaltabPage;
         private System.Windows.Forms.TabPage FormacaotabPage;
@@ -1227,5 +1573,35 @@ namespace GeradorDeCurriculo
         private System.Windows.Forms.Button NovoFormacaobutton;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox IDFormacaotextBox;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label QtExperienciaProfissionallabel;
+        private System.Windows.Forms.DataGridView QtExperienciaProfissionallistDataGridView;
+        private System.Windows.Forms.DataGridView QtCandidaturasDataGridView;
+        private System.Windows.Forms.DataGridView QtCandidaturasAprovaDadataGridView;
+        private System.Windows.Forms.Label Formacaolabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn empresaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cargoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn segmentoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salarioDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDadosPessoaisDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dadosPessoaisDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridView QtFormacaoGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
     }
 }

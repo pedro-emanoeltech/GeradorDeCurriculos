@@ -12,34 +12,34 @@ using GeradorDeCurriculo.Dados.Mapeamento;
 
 namespace GeradorDeCurriculo
 {
-    public partial class CurriculoEditarForm : Form
+    public partial class CurriculoForm : Form
     {
 
         DadosPessoais dadospessoais = null;
+                 // se tipologado Verdadeiro usuario é Candidato
         bool tipologado = Ponte.UsuarioLogado.AcessoCurriculo;
         int idUsuario = Ponte.UsuarioLogado.ID;
-        public CurriculoEditarForm()
+
+        public CurriculoForm()
         {
             InitializeComponent();
             Application.DoEvents();
 
             this.Text = "Novo Curriculo";
             IDDadosPessoaistextBox.Text = "Automático";
+
             IDDadosPessoaistextBox.Enabled = false;
             ExcluirDadosPessoaisButton.Enabled = false;
-            dadospessoais = new DadosPessoais();
             ExperienciaProfissionalbutton.Enabled = false;
             Formacaobutton.Enabled = false;
-            Usuariobutton.Enabled = false;
+            Candidaturas.Enabled = false;
             ExcluirDadosPessoaisButton.Enabled = false;
             DataNascimentodateTimePicker.Text = ("");
-
-
-
+            dadospessoais = new DadosPessoais();
 
         }
 
-        public CurriculoEditarForm(int id)
+        public CurriculoForm(int id)
         {
             InitializeComponent();
             Application.DoEvents();
@@ -95,7 +95,7 @@ namespace GeradorDeCurriculo
 
                 ExcluirDadosPessoaisButton.Enabled = false;
                 GravarDadosPessoaisbutton.Enabled = false;
-                Usuariobutton.Enabled = false;
+                Candidaturas.Enabled = false;
 
 
             }
@@ -213,6 +213,39 @@ namespace GeradorDeCurriculo
         private void Usuariobutton_Click(object sender, EventArgs e)
         {
             tabelasdecontrole(3);
+
+
+            if (tipologado == true)
+            {
+                int id = Convert.ToInt32(IDDadosPessoaistextBox.Text);
+
+                //informaçoes da experiencia profissional lista
+                ExperienciaProfissionalDAO ExperienciaProfissional = new ExperienciaProfissionalDAO();    
+                var ListarExperienciaProfissional = ExperienciaProfissional.Listar(id);
+                QtExperienciaProfissionallabel.Text = "" + ListarExperienciaProfissional.Count();
+                QtExperienciaProfissionallistDataGridView.DataSource = ListarExperienciaProfissional;
+
+                //informaçoes de formaçao lista
+                FormacaoDAO formacao = new FormacaoDAO();
+                var ListarFormacao = formacao.Listar(id);
+                Formacaolabel.Text = "" + ListarFormacao.Count();
+                QtFormacaoGridView.DataSource = ListarFormacao;
+
+
+                //informaçoes de candidaturas cadastradas pelo Candidato
+
+
+
+
+
+
+            }
+            else
+            {
+
+
+            }
+
 
         }
 
@@ -622,6 +655,26 @@ namespace GeradorDeCurriculo
         }
 
         private void DadosPessoaistabPage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NacionalidadeDadosPessoaistextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnderecoDadosPessoaistextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formacaoBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }

@@ -19,19 +19,15 @@ namespace GeradorDeCurriculo.Dados.DAL
 
         public Empresa Buscar(int id)
         {
-            return acessoDB.Query<Empresa>(@"select *from Empresas where ID=@id", new { id }).SingleOrDefault();
+            return acessoDB.Query<Empresa>(@"select *from Empresa where ID=@id", new { id }).SingleOrDefault();
 
         }
-
-       
 
         public Empresa Rastreio(int id)
         {
-            return acessoDB.Query<Empresa>(@"select *from Empresas where IDUsuario=@id", new { id }).SingleOrDefault();
+            return acessoDB.Query<Empresa>(@"select *from Empresa where IDUsuario=@id", new { id }).SingleOrDefault();
 
         }
-
-
 
         public int Salvar(Empresa empresa)
         {
@@ -40,23 +36,20 @@ namespace GeradorDeCurriculo.Dados.DAL
             if (empresa.ID == 0)
             {
 
-                return acessoDB.Execute("INSERT INTO Empresas (CNPJ,Nome,Setor,Cidade,Endereco,Bairro,Numero,IDUsuario) VALUES (@CNPJ,@Nome,@Setor,@Cidade,@Endereco,@Bairro,@Numero,@IDUsuario) SELECT @@Identity", empresa);
+                return acessoDB.Execute("INSERT INTO Empresa (CNPJ,Nome,Setor,Cidade,Endereco,Bairro,Numero,IDUsuario) VALUES (@CNPJ,@Nome,@Setor,@Cidade,@Endereco,@Bairro,@Numero,@IDUsuario) SELECT @@Identity", empresa);
 
             }
             else
             {
                 //UPDATE
-                if (acessoDB.Execute("UPDATE empresas SET CNPJ =@CNPJ ,Nome = @Nome ,Setor=@Setor, Cidade=@Cidade,Endereco=@Endereco,Bairro =@Bairro,Numero=@Numero ,IDUsuario=@IDUsuario WHERE Empresas.ID = @ID", empresa) == 1)
+                if (acessoDB.Execute("UPDATE empresa SET CNPJ =@CNPJ ,Nome = @Nome ,Setor=@Setor, Cidade=@Cidade,Endereco=@Endereco,Bairro =@Bairro,Numero=@Numero ,IDUsuario=@IDUsuario WHERE Empresa.ID = @ID", empresa) == 1)
                     return empresa.ID;
 
                 else
                     return 0;
             }
             
-
-
         }
-
 
     }
 }

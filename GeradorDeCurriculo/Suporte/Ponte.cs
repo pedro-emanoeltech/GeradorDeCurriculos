@@ -9,7 +9,8 @@ namespace GeradorDeCurriculo
 {
     public static class Ponte
     {
-        public static Usuarios UsuarioLogado { get; set; }
+        // Se verdadeiro Usuario é Candidato... Caso contrario é empresa.
+        public static Usuario UsuarioLogado { get; set; }
 
         public static DadosPessoais Candidato { get; set; }
 
