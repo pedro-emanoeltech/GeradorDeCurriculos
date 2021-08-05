@@ -15,6 +15,7 @@ namespace GeradorDeCurriculo
     {
         bool tipologado = Ponte.UsuarioLogado.AcessoCurriculo;
         int idUsuario = Ponte.UsuarioLogado.ID;
+
         public ConsultaVagaForm()
         {
             InitializeComponent();
@@ -105,12 +106,6 @@ namespace GeradorDeCurriculo
 
         private void TelacurriculoForm_Load(object sender, EventArgs e)
         {
-
-        }
-
-        public void IDalterar( )
-        {
-            
 
         }
 

@@ -114,22 +114,22 @@ namespace GeradorDeCurriculo
             // curriculoToolStripMenuItem
             // 
             this.curriculoToolStripMenuItem.Name = "curriculoToolStripMenuItem";
-            this.curriculoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.curriculoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.curriculoToolStripMenuItem.Text = "Curriculo";
             this.curriculoToolStripMenuItem.Click += new System.EventHandler(this.curriculoToolStripMenuItem_Click);
             // 
             // empresaToolStripMenuItem
             // 
             this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
-            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.empresaToolStripMenuItem.Text = "Empresa";
             this.empresaToolStripMenuItem.Click += new System.EventHandler(this.empresaToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuario";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // statusStrip1
@@ -167,7 +167,7 @@ namespace GeradorDeCurriculo
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 17);
             this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
-            // TelaInicalForm
+            // IncialForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -177,7 +177,7 @@ namespace GeradorDeCurriculo
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Name = "TelaInicalForm";
+            this.Name = "IncialForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerador De Currículo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

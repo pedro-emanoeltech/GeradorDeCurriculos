@@ -16,10 +16,5 @@ namespace GeradorDeCurriculo.Dados.Mapeamento
         public string Instrucoes { get; set; }
         public string CurriculoNome { get; set; }
 
-
-
-
-
-
     }
 }

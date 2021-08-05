@@ -18,16 +18,7 @@ namespace GeradorDeCurriculo
         {
             InitializeComponent();
             Application.DoEvents();
-
-          
-            int idUsuario = Ponte.UsuarioLogado.ID;
-            var exite = new DadosPessoaisDAO().exite(idUsuario);
-            if (exite != null)
-            {
-                Incluirbutton.Enabled = false;
-            }
-
-
+            VerificarExistenciaCurriculo();
 
         }
 
@@ -38,12 +29,7 @@ namespace GeradorDeCurriculo
 
         private void buscarButton_Click(object sender, EventArgs e)
         {
-            Listar();
-
-        }
-
-        private void Excluirbutton_Click(object sender, EventArgs e)
-        {
+            ListarCurriculo();
 
         }
 
@@ -57,27 +43,6 @@ namespace GeradorDeCurriculo
             Close();
         }
 
-        void Listar()
-        {
-
-            StatusBuscalabel.Text = "Buscando....";
-            //atualizar label antes de rodar todo o codigo
-            Application.DoEvents();
-
-
-            int iddadospessoais = Ponte.UsuarioLogado.ID;
-            var lista = new DadosPessoaisDAO().Listar(iddadospessoais);
-            Alterarbutton.Enabled = lista.Count > 0;
-            StatusBuscalabel.Text = "Registros Encontrados:" + lista.Count;
-            Application.DoEvents(); 
-
-
-
-
-
-            ListarCurriculodataGridView.DataSource = lista;
-        }
-
         private void label1_Click_1(object sender, EventArgs e)
         {
 
@@ -88,19 +53,55 @@ namespace GeradorDeCurriculo
 
         }
 
-        public void IDalterar( )
+        private void Alterarbutton_Click(object sender, EventArgs e)
         {
-            
+            EditarCurriculo();
 
         }
 
-        private void Alterarbutton_Click(object sender, EventArgs e)
+        private void Incluirbutton_Click(object sender, EventArgs e)
+        { 
+            new CurriculoForm().ShowDialog();
+            ListarCurriculo();
+
+        }
+
+        private void ListarCurriculodataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        void ListarCurriculo()
+        {
+            StatusBuscalabel.Text = "Buscando....";
+            //atualizar label antes de rodar todo o codigo
+            Application.DoEvents();
+
+            int iddadospessoais = Ponte.UsuarioLogado.ID;
+            var lista = new DadosPessoaisDAO().Listar(iddadospessoais);
+            Alterarbutton.Enabled = lista.Count > 0;
+            StatusBuscalabel.Text = "Registros Encontrados:" + lista.Count;
+            Application.DoEvents();
+
+            ListarCurriculodataGridView.DataSource = lista;
+        }
+
+        void VerificarExistenciaCurriculo()
+        {
+            // verificar se ja possui curriculo
+            int idUsuario = Ponte.UsuarioLogado.ID;
+            var exite = new DadosPessoaisDAO().exite(idUsuario);
+            if (exite != null)
+            {
+                Incluirbutton.Enabled = false;
+            }
+        }
+
+        void EditarCurriculo()
         {
             int id = 0;
             try
             {
                 id = Convert.ToInt32(ListarCurriculodataGridView.SelectedRows[0].Cells["iDDataGridViewTextBoxColumn"].Value);
-
             }
             catch
             {
@@ -109,23 +110,10 @@ namespace GeradorDeCurriculo
             }
             if (id > 0)
             {
-
                 new CurriculoForm(id).ShowDialog();
-                Listar();
+                ListarCurriculo();
+
             }
-            
-        }
-
-        private void Incluirbutton_Click(object sender, EventArgs e)
-        {
-            
-            new CurriculoForm().ShowDialog();
-            Listar();
-        }
-
-        private void ListarCurriculodataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

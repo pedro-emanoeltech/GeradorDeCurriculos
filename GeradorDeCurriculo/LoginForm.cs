@@ -40,13 +40,6 @@ namespace GeradorDeCurriculo
 
         }
 
-        private void UsuarioFecharbutton_Click(object sender, EventArgs e)
-        {
-            
-
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -61,17 +54,13 @@ namespace GeradorDeCurriculo
         {
 
         }
-
-        private void EntrarLoginbutton_Click(object sender, EventArgs e)
+        void ValidarUsuario(string login,string senha)
         {
-            
-            var usuario = new UsuarioDAO().EntrarLogin(LogintextBox.Text.Trim(), SenhaloginetextBox.Text.Trim());
-
-
+       
+             var usuario = new UsuarioDAO().EntrarLogin(login,senha);
             if (usuario == null)
             {
                 MessageBox.Show("Usuario ou Senha Incorreta \n Caso nao tenha login e senha tente se cadastrar", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
             else
             {
@@ -81,11 +70,15 @@ namespace GeradorDeCurriculo
                     return;
 
                 }
-
-
                 Ponte.UsuarioLogado = usuario;
                 Close();
             }
+
+        }
+
+        private void EntrarLoginbutton_Click(object sender, EventArgs e)
+        {
+            ValidarUsuario(LogintextBox.Text.Trim(), SenhaloginetextBox.Text.Trim());
         }
 
         private void Cadastrarloginbutton_Click(object sender, EventArgs e)

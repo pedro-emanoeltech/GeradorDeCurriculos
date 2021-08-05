@@ -16,16 +16,12 @@ namespace GeradorDeCurriculo
     {
         Empresa CadEmpresa = null;
         Usuario UsuarioGravar = null;
+
         public EmpresaForm()
         {
             InitializeComponent();
             Application.DoEvents();
-
-            this.Text = "Nova Empresa";
-            IDEmpresatextBox.Text = "Automatico";
-            IDEmpresatextBox.Enabled = false;
-            CadEmpresa = new Empresa();
-            UsuarioGravar = new Usuario();
+            NovaEmpresa();
 
         }
 
@@ -33,73 +29,10 @@ namespace GeradorDeCurriculo
         {
             InitializeComponent();
             Application.DoEvents();
-            this.Text = "Alterando Dados da Empresa";
-            
-            CadEmpresa = new EmpresaDAO().Buscar(id);
-            IDEmpresatextBox.Enabled = false;
-
-            IDEmpresatextBox.Text = CadEmpresa.ID.ToString().Trim();
-            NomeEmpresatextBox.Text = CadEmpresa.Nome.ToString().Trim();
-            CNPJEmpresatextBox.Text = CadEmpresa.CNPJ.ToString().Trim();
-            SetorEmpresatextBox.Text = CadEmpresa.Setor.ToString().Trim();
-            EnderecoEmpresatextBox.Text = CadEmpresa.Endereco.ToString().Trim();
-            NumeroEmpresatextBox.Text = CadEmpresa.Numero.ToString().Trim();
-            BairroEmpresatextBox.Text = CadEmpresa.Bairro.ToString().Trim();
-            CidadeEmpresatextBox.Text = CadEmpresa.Cidade.ToString().Trim();
-
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buscarButton_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void Excluirbutton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-       
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
+            EditarEmpresa(id);
         }
 
         private void TelacurriculoForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        public void IDalterar( )
-        {
-            
-
-        }
-
-
-        private void ListarCurriculodataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void ListarCurriculodataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -149,11 +82,6 @@ namespace GeradorDeCurriculo
 
         }
 
-        private void dadosPessoaisBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void FecharEmpresaButton_Click(object sender, EventArgs e)
         {
             Close();
@@ -161,36 +89,53 @@ namespace GeradorDeCurriculo
 
         private void GravarEmpresabutton_Click(object sender, EventArgs e)
         {
-           
+            GravarEmpresa();
+        }
+
+        void NovaEmpresa()
+        {
+
+            this.Text = "Nova Empresa";
+            IDEmpresatextBox.Text = "Automatico";
+            IDEmpresatextBox.Enabled = false;
+            CadEmpresa = new Empresa();
+            UsuarioGravar = new Usuario();
+        }
+
+        void EditarEmpresa(int id)
+        {
+            this.Text = "Alterando Dados da Empresa";
+            CadEmpresa = new EmpresaDAO().Buscar(id);
+
+            IDEmpresatextBox.Enabled = false;
+            IDEmpresatextBox.Text = CadEmpresa.ID.ToString().Trim();
+            NomeEmpresatextBox.Text = CadEmpresa.Nome.ToString().Trim();
+            CNPJEmpresatextBox.Text = CadEmpresa.CNPJ.ToString().Trim();
+            SetorEmpresatextBox.Text = CadEmpresa.Setor.ToString().Trim();
+            EnderecoEmpresatextBox.Text = CadEmpresa.Endereco.ToString().Trim();
+            NumeroEmpresatextBox.Text = CadEmpresa.Numero.ToString().Trim();
+            BairroEmpresatextBox.Text = CadEmpresa.Bairro.ToString().Trim();
+            CidadeEmpresatextBox.Text = CadEmpresa.Cidade.ToString().Trim();
+        }
+
+        void GravarEmpresa()
+        {
             CadEmpresa.Nome = NomeEmpresatextBox.Text.Trim();
             CadEmpresa.CNPJ = CNPJEmpresatextBox.Text.Trim();
-             CadEmpresa.Setor = SetorEmpresatextBox.Text.Trim();
-             CadEmpresa.Endereco = EnderecoEmpresatextBox.Text.Trim();
-           CadEmpresa.Numero = NumeroEmpresatextBox.Text.Trim();
-           CadEmpresa.Bairro = BairroEmpresatextBox.Text.Trim();
-             CadEmpresa.Cidade = CidadeEmpresatextBox.Text.Trim();
+            CadEmpresa.Setor = SetorEmpresatextBox.Text.Trim();
+            CadEmpresa.Endereco = EnderecoEmpresatextBox.Text.Trim();
+            CadEmpresa.Numero = NumeroEmpresatextBox.Text.Trim();
+            CadEmpresa.Bairro = BairroEmpresatextBox.Text.Trim();
+            CadEmpresa.Cidade = CidadeEmpresatextBox.Text.Trim();
             CadEmpresa.IDUsuario = Ponte.UsuarioLogado.ID;
-            MessageBox.Show(Ponte.UsuarioLogado.ID.ToString());
 
             var gravar = new EmpresaDAO().Salvar(CadEmpresa);
 
-            
             if (gravar == 0)
-            {
                 MessageBox.Show("Erro ao Gravar!");
 
-            }
-
             else
-            {
-                
                 MessageBox.Show("Registro Gravado !");
-                
-            }
-
-
-            
-
 
         }
     }
